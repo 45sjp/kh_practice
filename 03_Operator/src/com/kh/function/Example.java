@@ -30,7 +30,7 @@ public class Example {
 		avg = sum / 3.0;
 		
 		// 합격 조건
-		String pass = ((kor >= 40 && eng >= 40 && math > 40) && avg >= 60) ?
+		String pass = ((kor >= 40 && eng >= 40 && math >= 40) && avg >= 60) ?
 						"합격" : "불합격";
 		
 		// 출력
