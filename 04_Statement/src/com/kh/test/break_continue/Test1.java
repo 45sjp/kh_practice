@@ -59,7 +59,7 @@ public class Test1 {
 		}
 		
 		int j = sNum;
-		while(j <= bNum) {
+		while(j < bNum) {
 			j++;
 			if(j % 2 == 0)
 			continue;
