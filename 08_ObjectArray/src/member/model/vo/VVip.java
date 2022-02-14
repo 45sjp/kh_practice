@@ -1,37 +1,17 @@
 package member.model.vo;
 
-public class VVip {
-	private String name;
-	private String grade;
-	private int point;
+public class VVip extends Member {
 	
-	public VVip() {}
+	public VVip() {
+		super();
+	}
+
 	public VVip(String name, String grade, int point) {
-		this.name = name;
-		this.grade = grade;
-		this.point = point;
+		super(name, grade, point);
 	}
 	
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
-	public String getGrade() {
-		return grade;
-	}
-	public void setPoint(int point) {
-		this.point = point;
-	}
-	public int getPoint() {
-		return point;
-	}
-	
+	@Override
 	public double getBonusPoint() {
-		return point *= 0.15;
+		return getPoint() * 0.15;
 	}
 }
