@@ -31,11 +31,12 @@ public class MemberManager {
 		}
 		
 		System.out.println(bottom);
+		System.out.println();
 	}
 	
 	// 등급별 차등 할인율 적용
 	public void printBuyInfo(int price) {
-		String top = "----------------------- 실제 구매 금액 정보 출력 -----------------------";
+		String top = "---------------------- 실제 구매금액 정보 출력 ----------------------";
 		String bottom = "----------------------------------------------------------------";
 		
 		System.out.println(top);
@@ -46,5 +47,7 @@ public class MemberManager {
 								m.getGrade(), m.getName(),
 								price, m.buy(price));
 		}
+		
+		System.out.println(bottom);
 	}
 }
