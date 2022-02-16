@@ -22,12 +22,10 @@ public class MemberManager {
 		System.out.println(top);
 		
 		for(int i = 0; i < INDEX; i++) {
-			Member m = members[i]; // 변수 선언해주면 간단
+			Member m = members[i];
 			System.out.printf("%s\t\t%s\t\t%d\t\t%.2f%n",
-					m.getName(), m.getGrade(), // 자식객체가 호출되는 것
+					m.getName(), m.getGrade(),
 					m.getPoint(), m.getBonusPoint());
-//					members[i].getName(), members[i].getGrade(),
-//					members[i].getPoint(), members[i].getBonusPoint());
 		}
 		
 		System.out.println(bottom);
