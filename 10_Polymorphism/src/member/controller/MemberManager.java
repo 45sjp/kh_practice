@@ -6,7 +6,7 @@ public class MemberManager {
 	private static final int MEMBER_COUNT = 40;
 	Member[] members = new Member[MEMBER_COUNT];
 	
-	private static int INDEX = 0;
+	private int INDEX = 0;
 	
 	public void insertMember(Member m) {
 		members[INDEX++] = m;
@@ -22,11 +22,29 @@ public class MemberManager {
 		System.out.println(top);
 		
 		for(int i = 0; i < INDEX; i++) {
+			Member m = members[i]; // 변수 선언해주면 간단
 			System.out.printf("%s\t\t%s\t\t%d\t\t%.2f%n",
-					members[i].getName(), members[i].getGrade(),
-					members[i].getPoint(), members[i].getBonusPoint());
+					m.getName(), m.getGrade(), // 자식객체가 호출되는 것
+					m.getPoint(), m.getBonusPoint());
+//					members[i].getName(), members[i].getGrade(),
+//					members[i].getPoint(), members[i].getBonusPoint());
 		}
 		
 		System.out.println(bottom);
+	}
+	
+	// 등급별 차등 할인율 적용
+	public void printBuyInfo(int price) {
+		String top = "----------------------- 실제 구매 금액 정보 출력 -----------------------";
+		String bottom = "----------------------------------------------------------------";
+		
+		System.out.println(top);
+		
+		for(int i = 0; i < INDEX; i++) {
+			Member m = members[i];
+			System.out.printf("%s등급회원 %s는 %d원 상품을 %d원에 구매합니다.%n",
+								m.getGrade(), m.getName(),
+								price, m.buy(price));
+		}
 	}
 }

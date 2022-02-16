@@ -1,14 +1,14 @@
 package member.model.vo;
 
-public class Vip extends Member {
+public class Ruby extends Member {
 	
-	private static final double RATE = 0.10;
+	private static final double RATE = 0.30;
 	
-	public Vip() {
+	public Ruby() {
 		super();
 	}
 	
-	public Vip(String name, String grade, int point) {
+	public Ruby(String name, String grade, int point) {
 		super(name, grade, point);
 	}
 	

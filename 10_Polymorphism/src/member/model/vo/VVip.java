@@ -1,7 +1,9 @@
 package member.model.vo;
 
 public class VVip extends Member {
-
+	
+	private static final double RATE = 0.15;
+	
 	public VVip() {
 		super();
 	}
@@ -12,6 +14,11 @@ public class VVip extends Member {
 	
 	@Override
 	public double getBonusPoint() {
-		return getPoint() * 0.15;
+		return getPoint() * RATE;
+	}
+
+	@Override
+	public int buy(int price) {
+		return (int) (price - (price * RATE));
 	}
 }

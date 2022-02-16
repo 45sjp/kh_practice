@@ -2,6 +2,7 @@ package member.run;
 
 import member.controller.MemberManager;
 import member.model.vo.Gold;
+import member.model.vo.Ruby;
 import member.model.vo.Silver;
 import member.model.vo.VVip;
 import member.model.vo.Vip;
@@ -23,7 +24,10 @@ public class Run {
 		
 		mgr.insertMember(new VVip("신사임당", "VVip", 100000));
 		
+		mgr.insertMember(new Ruby("세종", "Ruby", 500000));
+		
 		mgr.printData();
+		mgr.printBuyInfo(10000);
 	}
 
 }
