@@ -33,11 +33,11 @@ public class BookManager {
 	 */
 	public void fileSave() {
 		Book[] books = new Book[5];
-		books[0] = new Book("불편한 편의점", "김호연", 14000, new GregorianCalendar(2021, 04, 20));
-		books[1] = new Book("달러구트 꿈 백화점", "이미예", 24000, new GregorianCalendar(2021, 12, 25));
-		books[2] = new Book("디 에센셜 헤르만 헤세", "헤르만 헤세", 17000, new GregorianCalendar(2022, 02, 11));
-		books[3] = new Book("어서 오세요, 휴남동 서점입니다", "황보름", 15000, new GregorianCalendar(2022, 01, 17));
-		books[4] = new Book("센 강의 이름 모를 여인", "기욤 뮈소", 16000, new GregorianCalendar(2022, 01, 19));
+		books[0] = new Book("불편한 편의점", "김호연", 14000, new GregorianCalendar(2021, 4 - 1, 20));
+		books[1] = new Book("달러구트 꿈 백화점", "이미예", 24000, new GregorianCalendar(2021, 12 - 1, 25));
+		books[2] = new Book("디 에센셜 헤르만 헤세", "헤르만 헤세", 17000, new GregorianCalendar(2022, 2  - 1, 11));
+		books[3] = new Book("어서 오세요, 휴남동 서점입니다", "황보름", 15000, new GregorianCalendar(2022, 1  - 1, 17));
+		books[4] = new Book("센 강의 이름 모를 여인", "기욤 뮈소", 16000, new GregorianCalendar(2022, 1  - 1, 19));
 		
 		String fileName = "books.dat";
 		try(ObjectOutputStream oos = 
