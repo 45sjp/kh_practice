@@ -26,7 +26,8 @@ public class SleepTest {
 		strArr[9] = "실패는 성공의 어머니.";
 		
 		for(String str : strArr) {
-			System.out.println(str);
+			int rnd = (int)(Math.random() * 10);
+			System.out.println(strArr[rnd]);
 			try {
 				Thread.sleep(3000);
 			} catch (InterruptedException e) {
